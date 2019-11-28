@@ -59,7 +59,7 @@ public class MainActivity2 extends FragmentActivity {
         fragments.add(three);
         initOnListener();
         rg_main.setSelectedItemId(R.id.one_rt);
-        Log.e("ss", "sss");
+        int i =0;
     }
 
     private void initOnListener() {
