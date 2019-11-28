@@ -33,14 +33,14 @@ public class MainActivity2 extends FragmentActivity {
     private List<BaseFragment> fragments;
     private Context context = MainActivity2.this;
     private BottomNavigationView rg_main;
-    private int position =0;
+    private int position = 0;
     private BaseFragment mContext;
     private FrameLayout frameLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            initview();
+        initview();
     }
 
     private void initview() {
@@ -48,18 +48,18 @@ public class MainActivity2 extends FragmentActivity {
         refWatcher.watch(this);
         ScreenAdapter.match(context, 360);
         setContentView(R.layout.viewpager);
-         frameLayout = findViewById(R.id.frameLayout);
-        rg_main  =(BottomNavigationView)findViewById(R.id.rg_main);
+        frameLayout = findViewById(R.id.frameLayout);
+        rg_main = (BottomNavigationView) findViewById(R.id.rg_main);
         fragments = new ArrayList<>();
         OneFragment one = new OneFragment(context);
         ThreeFragment three = new ThreeFragment(context);
-        TwoFragment two= new TwoFragment(context);
+        TwoFragment two = new TwoFragment(context);
         fragments.add(one);
         fragments.add(two);
         fragments.add(three);
         initOnListener();
         rg_main.setSelectedItemId(R.id.one_rt);
-
+        Log.e("ss", "sss");
     }
 
     private void initOnListener() {
@@ -94,7 +94,6 @@ public class MainActivity2 extends FragmentActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
-
 
 
     private BaseFragment getFragment(int position) {
